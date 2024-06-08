@@ -1,0 +1,771 @@
+{
+	"info": {
+		"_postman_id": "3ff1eb80-2d5f-4fda-8987-4d91baf1d2eb",
+		"name": "2100270310145",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24106690"
+	},
+	"item": [
+		{
+			"name": "Register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"companyName\": \"Ajay Kumar Garg Engineering College\",\r\n  \"ownerName\": \"Simran Yadav\",\r\n  \"rollNo\": \"2100270310145\",\r\n  \"ownerEmail\": \"simranyadav464@gmail.com\",\r\n  \"accessCode\": \"yUDwzZ\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://20.244.56.144/test/register",
+					"protocol": "http",
+					"host": [
+						"20",
+						"244",
+						"56",
+						"144"
+					],
+					"path": [
+						"test",
+						"register"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "New Request",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"companyName\": \"Ajay Kumar Garg Engineering College\",\r\n  \"ownerName\": \"Simran Yadav\",\r\n  \"rollNo\": \"2100270310145\",\r\n  \"ownerEmail\": \"simranyadav464@gmail.com\",\r\n  \"accessCode\": \"yUDwzZ\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://20.244.56.144/test/register",
+							"protocol": "http",
+							"host": [
+								"20",
+								"244",
+								"56",
+								"144"
+							],
+							"path": [
+								"test",
+								"register"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Sat, 08 Jun 2024 05:21:40 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "229"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Access-Control-Allow-Credentials",
+							"value": "true"
+						},
+						{
+							"key": "Access-Control-Allow-Headers",
+							"value": "Content-Type, Content-Length, Accept-Encoding, X-CSRF-Token, Authorization, accept, origin, Cache-Control, X-Requested-With"
+						},
+						{
+							"key": "Access-Control-Allow-Methods",
+							"value": "POST, OPTIONS, GET, PUT"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "1;mode=block"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"companyName\": \"Ajay Kumar Garg Engineering College\",\n    \"clientID\": \"90b21369-c4e9-4514-b74f-f082ef9530ef\",\n    \"clientSecret\": \"nLGVMqiyjHiwpMfh\",\n    \"ownerName\": \"Simran Yadav\",\n    \"ownerEmail\": \"simranyadav464@gmail.com\",\n    \"rollNo\": \"2100270310145\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Authentication",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"companyName\": \"Ajay Kumar Garg Engineering College\",\r\n  \"clientID\": \"90b21369-c4e9-4514-b74f-f082ef9530ef\",\r\n  \"clientSecret\": \"nLGVMqiyjHiwpMfh\",\r\n  \"ownerName\": \"Simran Yadav\",\r\n  \"ownerEmail\": \"simranyadav464@gmail.com\",\r\n  \"rollNo\": \"2100270310145\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://20.244.56.144/test/auth",
+					"protocol": "http",
+					"host": [
+						"20",
+						"244",
+						"56",
+						"144"
+					],
+					"path": [
+						"test",
+						"auth"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "New Request",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"companyName\": \"Ajay Kumar Garg Engineering College\",\r\n  \"clientID\": \"90b21369-c4e9-4514-b74f-f082ef9530ef\",\r\n  \"clientSecret\": \"nLGVMqiyjHiwpMfh\",\r\n  \"ownerName\": \"Simran Yadav\",\r\n  \"ownerEmail\": \"simranyadav464@gmail.com\",\r\n  \"rollNo\": \"2100270310145\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://20.244.56.144/test/auth",
+							"protocol": "http",
+							"host": [
+								"20",
+								"244",
+								"56",
+								"144"
+							],
+							"path": [
+								"test",
+								"auth"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Sat, 08 Jun 2024 05:23:59 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "644"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Access-Control-Allow-Credentials",
+							"value": "true"
+						},
+						{
+							"key": "Access-Control-Allow-Headers",
+							"value": "Content-Type, Content-Length, Accept-Encoding, X-CSRF-Token, Authorization, accept, origin, Cache-Control, X-Requested-With"
+						},
+						{
+							"key": "Access-Control-Allow-Methods",
+							"value": "POST, OPTIONS, GET, PUT"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "1;mode=block"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"token_type\": \"Bearer\",\n    \"access_token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJNYXBDbGFpbXMiOnsiZXhwIjoxNzE3ODI0NTM5LCJpYXQiOjE3MTc4MjQyMzksImlzcyI6IkFmZm9yZG1lZCIsImp0aSI6IjkwYjIxMzY5LWM0ZTktNDUxNC1iNzRmLWYwODJlZjk1MzBlZiIsInN1YiI6InNpbXJhbnlhZGF2NDY0QGdtYWlsLmNvbSJ9LCJjb21wYW55TmFtZSI6IkFqYXkgS3VtYXIgR2FyZyBFbmdpbmVlcmluZyBDb2xsZWdlIiwiY2xpZW50SUQiOiI5MGIyMTM2OS1jNGU5LTQ1MTQtYjc0Zi1mMDgyZWY5NTMwZWYiLCJjbGllbnRTZWNyZXQiOiJuTEdWTXFpeWpIaXdwTWZoIiwib3duZXJOYW1lIjoiU2ltcmFuIFlhZGF2Iiwib3duZXJFbWFpbCI6InNpbXJhbnlhZGF2NDY0QGdtYWlsLmNvbSIsInJvbGxObyI6IjIxMDAyNzAzMTAxNDUifQ.V8J_UvuSdUJwXKS-ubaBfubHTh2ai-AUt9YcF3Bp8aY\",\n    \"expires_in\": 1717824539\n}"
+				}
+			]
+		},
+		{
+			"name": "Prime Numbers",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJNYXBDbGFpbXMiOnsiZXhwIjoxNzE3ODMyOTU0LCJpYXQiOjE3MTc4MzI2NTQsImlzcyI6IkFmZm9yZG1lZCIsImp0aSI6IjkwYjIxMzY5LWM0ZTktNDUxNC1iNzRmLWYwODJlZjk1MzBlZiIsInN1YiI6InNpbXJhbnlhZGF2NDY0QGdtYWlsLmNvbSJ9LCJjb21wYW55TmFtZSI6IkFqYXkgS3VtYXIgR2FyZyBFbmdpbmVlcmluZyBDb2xsZWdlIiwiY2xpZW50SUQiOiI5MGIyMTM2OS1jNGU5LTQ1MTQtYjc0Zi1mMDgyZWY5NTMwZWYiLCJjbGllbnRTZWNyZXQiOiJuTEdWTXFpeWpIaXdwTWZoIiwib3duZXJOYW1lIjoiU2ltcmFuIFlhZGF2Iiwib3duZXJFbWFpbCI6InNpbXJhbnlhZGF2NDY0QGdtYWlsLmNvbSIsInJvbGxObyI6IjIxMDAyNzAzMTAxNDUifQ.Lb00LxKu1LFlvXxkVG97ryO6Fu-pQaLuIYKSWaJibKQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://20.244.56.144/test/primes",
+					"protocol": "http",
+					"host": [
+						"20",
+						"244",
+						"56",
+						"144"
+					],
+					"path": [
+						"test",
+						"primes"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "New Request",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://20.244.56.144/test/primes",
+							"protocol": "http",
+							"host": [
+								"20",
+								"244",
+								"56",
+								"144"
+							],
+							"path": [
+								"test",
+								"primes"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Sat, 08 Jun 2024 05:50:32 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "92"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Access-Control-Allow-Credentials",
+							"value": "true"
+						},
+						{
+							"key": "Access-Control-Allow-Headers",
+							"value": "Content-Type, Content-Length, Accept-Encoding, X-CSRF-Token, Authorization, accept, origin, Cache-Control, X-Requested-With"
+						},
+						{
+							"key": "Access-Control-Allow-Methods",
+							"value": "POST, OPTIONS, GET, PUT"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "1;mode=block"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"numbers\": [\n        2,\n        3,\n        5,\n        7,\n        11,\n        13,\n        17,\n        19,\n        23,\n        29,\n        31,\n        37,\n        41,\n        43,\n        47,\n        53,\n        59,\n        61,\n        67,\n        71,\n        73,\n        79,\n        83,\n        89,\n        97,\n        101,\n        103\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "Even Numbers",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJNYXBDbGFpbXMiOnsiZXhwIjoxNzE3ODI2MDkzLCJpYXQiOjE3MTc4MjU3OTMsImlzcyI6IkFmZm9yZG1lZCIsImp0aSI6IjkwYjIxMzY5LWM0ZTktNDUxNC1iNzRmLWYwODJlZjk1MzBlZiIsInN1YiI6InNpbXJhbnlhZGF2NDY0QGdtYWlsLmNvbSJ9LCJjb21wYW55TmFtZSI6IkFqYXkgS3VtYXIgR2FyZyBFbmdpbmVlcmluZyBDb2xsZWdlIiwiY2xpZW50SUQiOiI5MGIyMTM2OS1jNGU5LTQ1MTQtYjc0Zi1mMDgyZWY5NTMwZWYiLCJjbGllbnRTZWNyZXQiOiJuTEdWTXFpeWpIaXdwTWZoIiwib3duZXJOYW1lIjoiU2ltcmFuIFlhZGF2Iiwib3duZXJFbWFpbCI6InNpbXJhbnlhZGF2NDY0QGdtYWlsLmNvbSIsInJvbGxObyI6IjIxMDAyNzAzMTAxNDUifQ.ghqgbX4mrw5ARfW4xNSMCRD5pVYMn_KmdrH2Lz0dJVw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://20.244.56.144/test/even",
+					"protocol": "http",
+					"host": [
+						"20",
+						"244",
+						"56",
+						"144"
+					],
+					"path": [
+						"test",
+						"even"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "New Request",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://20.244.56.144/test/even",
+							"protocol": "http",
+							"host": [
+								"20",
+								"244",
+								"56",
+								"144"
+							],
+							"path": [
+								"test",
+								"even"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Sat, 08 Jun 2024 05:50:10 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "49"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Access-Control-Allow-Credentials",
+							"value": "true"
+						},
+						{
+							"key": "Access-Control-Allow-Headers",
+							"value": "Content-Type, Content-Length, Accept-Encoding, X-CSRF-Token, Authorization, accept, origin, Cache-Control, X-Requested-With"
+						},
+						{
+							"key": "Access-Control-Allow-Methods",
+							"value": "POST, OPTIONS, GET, PUT"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "1;mode=block"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"numbers\": [\n        24,\n        26,\n        28,\n        30,\n        32,\n        34,\n        36,\n        38,\n        40,\n        42,\n        44,\n        46\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "Fibonacci Numbers",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJNYXBDbGFpbXMiOnsiZXhwIjoxNzE3ODI2MjA4LCJpYXQiOjE3MTc4MjU5MDgsImlzcyI6IkFmZm9yZG1lZCIsImp0aSI6IjkwYjIxMzY5LWM0ZTktNDUxNC1iNzRmLWYwODJlZjk1MzBlZiIsInN1YiI6InNpbXJhbnlhZGF2NDY0QGdtYWlsLmNvbSJ9LCJjb21wYW55TmFtZSI6IkFqYXkgS3VtYXIgR2FyZyBFbmdpbmVlcmluZyBDb2xsZWdlIiwiY2xpZW50SUQiOiI5MGIyMTM2OS1jNGU5LTQ1MTQtYjc0Zi1mMDgyZWY5NTMwZWYiLCJjbGllbnRTZWNyZXQiOiJuTEdWTXFpeWpIaXdwTWZoIiwib3duZXJOYW1lIjoiU2ltcmFuIFlhZGF2Iiwib3duZXJFbWFpbCI6InNpbXJhbnlhZGF2NDY0QGdtYWlsLmNvbSIsInJvbGxObyI6IjIxMDAyNzAzMTAxNDUifQ.fCAaW2tZgYPx1duHEwA350FSginDLyc21_Tn7pOqOWQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://20.244.56.144/test/fibo",
+					"protocol": "http",
+					"host": [
+						"20",
+						"244",
+						"56",
+						"144"
+					],
+					"path": [
+						"test",
+						"fibo"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "New Request",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://20.244.56.144/test/fibo",
+							"protocol": "http",
+							"host": [
+								"20",
+								"244",
+								"56",
+								"144"
+							],
+							"path": [
+								"test",
+								"fibo"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Sat, 08 Jun 2024 05:52:07 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "107"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Access-Control-Allow-Credentials",
+							"value": "true"
+						},
+						{
+							"key": "Access-Control-Allow-Headers",
+							"value": "Content-Type, Content-Length, Accept-Encoding, X-CSRF-Token, Authorization, accept, origin, Cache-Control, X-Requested-With"
+						},
+						{
+							"key": "Access-Control-Allow-Methods",
+							"value": "POST, OPTIONS, GET, PUT"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "1;mode=block"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"numbers\": [\n        89,\n        144,\n        233,\n        377,\n        610,\n        987,\n        1597,\n        2584,\n        4181,\n        6765,\n        10946,\n        17711,\n        28657,\n        46368,\n        75025,\n        121393,\n        196418,\n        317811\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "Random Numbers",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJNYXBDbGFpbXMiOnsiZXhwIjoxNzE3ODI2MjgxLCJpYXQiOjE3MTc4MjU5ODEsImlzcyI6IkFmZm9yZG1lZCIsImp0aSI6IjkwYjIxMzY5LWM0ZTktNDUxNC1iNzRmLWYwODJlZjk1MzBlZiIsInN1YiI6InNpbXJhbnlhZGF2NDY0QGdtYWlsLmNvbSJ9LCJjb21wYW55TmFtZSI6IkFqYXkgS3VtYXIgR2FyZyBFbmdpbmVlcmluZyBDb2xsZWdlIiwiY2xpZW50SUQiOiI5MGIyMTM2OS1jNGU5LTQ1MTQtYjc0Zi1mMDgyZWY5NTMwZWYiLCJjbGllbnRTZWNyZXQiOiJuTEdWTXFpeWpIaXdwTWZoIiwib3duZXJOYW1lIjoiU2ltcmFuIFlhZGF2Iiwib3duZXJFbWFpbCI6InNpbXJhbnlhZGF2NDY0QGdtYWlsLmNvbSIsInJvbGxObyI6IjIxMDAyNzAzMTAxNDUifQ.J3cSl6qPh45nvsgFEYaYwUQKNkrT2nuINzJhyHDtuyg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://20.244.56.144/test/rand",
+					"protocol": "http",
+					"host": [
+						"20",
+						"244",
+						"56",
+						"144"
+					],
+					"path": [
+						"test",
+						"rand"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "New Request",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://20.244.56.144/test/rand",
+							"protocol": "http",
+							"host": [
+								"20",
+								"244",
+								"56",
+								"144"
+							],
+							"path": [
+								"test",
+								"rand"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Sat, 08 Jun 2024 05:53:27 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "51"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Access-Control-Allow-Credentials",
+							"value": "true"
+						},
+						{
+							"key": "Access-Control-Allow-Headers",
+							"value": "Content-Type, Content-Length, Accept-Encoding, X-CSRF-Token, Authorization, accept, origin, Cache-Control, X-Requested-With"
+						},
+						{
+							"key": "Access-Control-Allow-Methods",
+							"value": "POST, OPTIONS, GET, PUT"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "1;mode=block"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"numbers\": [\n        26,\n        18,\n        8,\n        16,\n        28,\n        22,\n        20,\n        9,\n        6,\n        15,\n        12,\n        2,\n        19,\n        25\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "Microservice URL",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJNYXBDbGFpbXMiOnsiZXhwIjoxNzE3ODM0MzI1LCJpYXQiOjE3MTc4MzQwMjUsImlzcyI6IkFmZm9yZG1lZCIsImp0aSI6IjkwYjIxMzY5LWM0ZTktNDUxNC1iNzRmLWYwODJlZjk1MzBlZiIsInN1YiI6InNpbXJhbnlhZGF2NDY0QGdtYWlsLmNvbSJ9LCJjb21wYW55TmFtZSI6IkFqYXkgS3VtYXIgR2FyZyBFbmdpbmVlcmluZyBDb2xsZWdlIiwiY2xpZW50SUQiOiI5MGIyMTM2OS1jNGU5LTQ1MTQtYjc0Zi1mMDgyZWY5NTMwZWYiLCJjbGllbnRTZWNyZXQiOiJuTEdWTXFpeWpIaXdwTWZoIiwib3duZXJOYW1lIjoiU2ltcmFuIFlhZGF2Iiwib3duZXJFbWFpbCI6InNpbXJhbnlhZGF2NDY0QGdtYWlsLmNvbSIsInJvbGxObyI6IjIxMDAyNzAzMTAxNDUifQ.JxOrO3dtAjmx1-p0AMTevOSk7quBVEsq6Zlgx-5rubw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9876/numbers/r",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9876",
+					"path": [
+						"numbers",
+						"r"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "New Request",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9876/numbers/r",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9876",
+							"path": [
+								"numbers",
+								"r"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "158"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"9e-WpkpwaPFgfNytTinV/jdR0QhS0c\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 08 Jun 2024 08:03:06 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"numbers\": [\n        5,\n        29,\n        11,\n        26,\n        18,\n        8,\n        16,\n        28,\n        22,\n        20,\n        9,\n        6,\n        15,\n        12,\n        2,\n        19,\n        25\n    ],\n    \"windowPrevState\": [],\n    \"windowCurrState\": [\n        5,\n        29,\n        11,\n        26,\n        18,\n        8,\n        16,\n        28,\n        22,\n        20,\n        9,\n        6,\n        15,\n        12,\n        2,\n        19,\n        25\n    ],\n    \"avg\": 15.94\n}"
+				},
+				{
+					"name": "New Request",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9876/numbers/p",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9876",
+							"path": [
+								"numbers",
+								"p"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "180"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"b4-sC0XZ+CrfhvuACVTeQdk2fTofAQ\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 08 Jun 2024 08:10:06 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"numbers\": [\n        17,\n        19,\n        23,\n        29,\n        31,\n        37,\n        41,\n        43,\n        47,\n        53,\n        59,\n        61,\n        67,\n        71,\n        73,\n        79,\n        83,\n        89,\n        97\n    ],\n    \"windowPrevState\": [],\n    \"windowCurrState\": [\n        17,\n        19,\n        23,\n        29,\n        31,\n        37,\n        41,\n        43,\n        47,\n        53,\n        59,\n        61,\n        67,\n        71,\n        73,\n        79,\n        83,\n        89,\n        97\n    ],\n    \"avg\": 53.63\n}"
+				}
+			]
+		}
+	]
+}
