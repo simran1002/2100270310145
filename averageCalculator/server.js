@@ -5,8 +5,7 @@ const app = express();
 const PORT = 9876;
 const WINDOW_SIZE = 10;
 const testServerUrl = 'http://20.244.56.144/test';
-const AUTH_TOKEN = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJNYXBDbGFpbXMiOnsiZXhwIjoxNzE3ODMzNjgyLCJpYXQiOjE3MTc4MzMzODIsImlzcyI6IkFmZm9yZG1lZCIsImp0aSI6IjkwYjIxMzY5LWM0ZTktNDUxNC1iNzRmLWYwODJlZjk1MzBlZiIsInN1YiI6InNpbXJhbnlhZGF2NDY0QGdtYWlsLmNvbSJ9LCJjb21wYW55TmFtZSI6IkFqYXkgS3VtYXIgR2FyZyBFbmdpbmVlcmluZyBDb2xsZWdlIiwiY2xpZW50SUQiOiI5MGIyMTM2OS1jNGU5LTQ1MTQtYjc0Zi1mMDgyZWY5NTMwZWYiLCJjbGllbnRTZWNyZXQiOiJuTEdWTXFpeWpIaXdwTWZoIiwib3duZXJOYW1lIjoiU2ltcmFuIFlhZGF2Iiwib3duZXJFbWFpbCI6InNpbXJhbnlhZGF2NDY0QGdtYWlsLmNvbSIsInJvbGxObyI6IjIxMDAyNzAzMTAxNDUifQ.khk2hWBoK4EcHZqa34ECn2ZSTTwHHd19jYujDDHBVMM'; // Replace 'YOUR_AUTH_TOKEN' with your actual authentication token
-
+const AUTH_TOKEN = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJNYXBDbGFpbXMiOnsiZXhwIjoxNzE3ODM0MDA0LCJpYXQiOjE3MTc4MzM3MDQsImlzcyI6IkFmZm9yZG1lZCIsImp0aSI6IjkwYjIxMzY5LWM0ZTktNDUxNC1iNzRmLWYwODJlZjk1MzBlZiIsInN1YiI6InNpbXJhbnlhZGF2NDY0QGdtYWlsLmNvbSJ9LCJjb21wYW55TmFtZSI6IkFqYXkgS3VtYXIgR2FyZyBFbmdpbmVlcmluZyBDb2xsZWdlIiwiY2xpZW50SUQiOiI5MGIyMTM2OS1jNGU5LTQ1MTQtYjc0Zi1mMDgyZWY5NTMwZWYiLCJjbGllbnRTZWNyZXQiOiJuTEdWTXFpeWpIaXdwTWZoIiwib3duZXJOYW1lIjoiU2ltcmFuIFlhZGF2Iiwib3duZXJFbWFpbCI6InNpbXJhbnlhZGF2NDY0QGdtYWlsLmNvbSIsInJvbGxObyI6IjIxMDAyNzAzMTAxNDUifQ.k_feCzN60iJ51YRVqQBNwBtXTGf-VeFo778YIWQx7uc'
 app.get('/numbers/:numberid', async (req, res) => {
   const { numberid } = req.params;
   const urlMap = {
@@ -49,6 +48,8 @@ app.get('/numbers/:numberid', async (req, res) => {
 
     res.json({
       numbers: uniqueNumbers,
+      windowPrevState: [], // Replace with your actual previous state data
+      windowCurrState: uniqueNumbers, // Assuming uniqueNumbers represent the current window
       avg: parseFloat(average.toFixed(2)),
     });
   } catch (error) {
