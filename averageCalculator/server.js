@@ -1,4 +1,3 @@
-
 require("dotenv").config();
 
 const express = require('express');
@@ -8,8 +7,19 @@ const axios = require('axios');
 const app = express();
 const PORT = 5000;
 const WINDOW_SIZE = 10;
-const TEST_SERVER_URL = process.env.TEST_URL;
+const TEST_URL = process.env.TEST_URL;
 
+mongoose.connect('mongodb://localhost:27017/average_calculator', {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+});
+
+const numberSchema = new mongoose.Schema({
+  value: { type: Number, unique: true },
+  createdAt: { type: Date, default: Date.now },
+});
+
+const NumberModel = mongoose.model('Number', numberSchema);
 
 app.get('/numbers/:numberid', async (req, res) => {
   const { numberid } = req.params;
@@ -24,7 +34,7 @@ app.get('/numbers/:numberid', async (req, res) => {
     return res.status(400).json({ error: 'Invalid number ID' });
   }
 
-  const url = `${TEST_SERVER_URL}/${urlMap[numberid]}`;
+  const url = `${TEST_URL}/${urlMap[numberid]}`;
 
   try {
     const response = await axios.get(url, { timeout: 500 });
