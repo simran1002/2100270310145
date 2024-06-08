@@ -1,25 +1,11 @@
-require("dotenv").config();
-
 const express = require('express');
-const mongoose = require('mongoose');
 const axios = require('axios');
 
 const app = express();
-const PORT = 5000;
+const PORT = 9876;
 const WINDOW_SIZE = 10;
-const TEST_URL = process.env.TEST_URL;
-
-mongoose.connect('mongodb://localhost:27017/average_calculator', {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-});
-
-const numberSchema = new mongoose.Schema({
-  value: { type: Number, unique: true },
-  createdAt: { type: Date, default: Date.now },
-});
-
-const NumberModel = mongoose.model('Number', numberSchema);
+const testServerUrl = 'http://20.244.56.144/test';
+const AUTH_TOKEN = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJNYXBDbGFpbXMiOnsiZXhwIjoxNzE3ODMzNjgyLCJpYXQiOjE3MTc4MzMzODIsImlzcyI6IkFmZm9yZG1lZCIsImp0aSI6IjkwYjIxMzY5LWM0ZTktNDUxNC1iNzRmLWYwODJlZjk1MzBlZiIsInN1YiI6InNpbXJhbnlhZGF2NDY0QGdtYWlsLmNvbSJ9LCJjb21wYW55TmFtZSI6IkFqYXkgS3VtYXIgR2FyZyBFbmdpbmVlcmluZyBDb2xsZWdlIiwiY2xpZW50SUQiOiI5MGIyMTM2OS1jNGU5LTQ1MTQtYjc0Zi1mMDgyZWY5NTMwZWYiLCJjbGllbnRTZWNyZXQiOiJuTEdWTXFpeWpIaXdwTWZoIiwib3duZXJOYW1lIjoiU2ltcmFuIFlhZGF2Iiwib3duZXJFbWFpbCI6InNpbXJhbnlhZGF2NDY0QGdtYWlsLmNvbSIsInJvbGxObyI6IjIxMDAyNzAzMTAxNDUifQ.khk2hWBoK4EcHZqa34ECn2ZSTTwHHd19jYujDDHBVMM'; // Replace 'YOUR_AUTH_TOKEN' with your actual authentication token
 
 app.get('/numbers/:numberid', async (req, res) => {
   const { numberid } = req.params;
@@ -34,11 +20,21 @@ app.get('/numbers/:numberid', async (req, res) => {
     return res.status(400).json({ error: 'Invalid number ID' });
   }
 
-  const url = `${TEST_URL}/${urlMap[numberid]}`;
+  const url = `${testServerUrl}/${urlMap[numberid]}`;
+  
+  console.log(`Fetching numbers from URL: ${url}`);
 
   try {
-    const response = await axios.get(url, { timeout: 500 });
+    const response = await axios.get(url, {
+      timeout: 500,
+      headers: {
+        Authorization: `Bearer ${AUTH_TOKEN}`
+      }
+    });
+
     const fetchedNumbers = response.data.numbers;
+    
+    console.log(`Received numbers: ${JSON.stringify(fetchedNumbers)}`);
 
     if (!Array.isArray(fetchedNumbers)) {
       return res.status(500).json({ error: 'Invalid response from test server' });
@@ -46,33 +42,17 @@ app.get('/numbers/:numberid', async (req, res) => {
 
     const uniqueNumbers = Array.from(new Set(fetchedNumbers));
 
-    const previousState = await NumberModel.find().sort({ createdAt: 1 }).limit(WINDOW_SIZE);
-    const previousValues = previousState.map(num => num.value);
-    const previousWindow = [...previousValues];
+    // Calculate previous window and current window if necessary
+    // Use uniqueNumbers directly if it represents the current window
 
-    for (let number of uniqueNumbers) {
-      if (previousValues.includes(number)) continue;
-
-      const numberDoc = new NumberModel({ value: number });
-      await numberDoc.save();
-
-      previousValues.push(number);
-      if (previousValues.length > WINDOW_SIZE) {
-        const oldest = previousValues.shift();
-        await NumberModel.deleteOne({ value: oldest });
-      }
-    }
-
-    const currentWindow = [...previousValues];
-    const average = currentWindow.reduce((acc, num) => acc + num, 0) / currentWindow.length;
+    const average = uniqueNumbers.reduce((acc, num) => acc + num, 0) / uniqueNumbers.length;
 
     res.json({
       numbers: uniqueNumbers,
-      windowPrevState: previousWindow,
-      windowCurrState: currentWindow,
       avg: parseFloat(average.toFixed(2)),
     });
   } catch (error) {
+    console.error('Error fetching numbers from test server:', error.message);
     return res.status(500).json({ error: 'Error fetching numbers from test server' });
   }
 });
